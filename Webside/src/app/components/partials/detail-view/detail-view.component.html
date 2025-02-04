@@ -1,0 +1,317 @@
+<div class="flex-container">
+  <div *ngIf="employeeData; else noEmployeeData" class="detailDiv">
+    <div class="detailContent">
+      <div
+        style="
+          padding: 45px;
+          height: fit-content;
+          width: 100%;
+          border-radius: 8px;
+          background-color: rgb(60,60,60);
+        ">
+
+        <div>
+          <h1 style="font-size: 32px; font-weight: 500; color: rgb(150,0,150)">
+            Mitarbeiter:innen Daten
+          </h1>
+
+          <a style="float: right ; background-color: transparent; border-color: transparent;" href="/">
+            <mat-icon style="color: darkred;">
+              cancel
+            </mat-icon>
+          </a>
+
+          <mat-icon style="font-size: 28px; color: white;">
+            person
+          </mat-icon>
+
+          <div>
+            <h2
+              style="
+                margin: 0;
+                font-size: 28px;
+                color: white;
+                display: inline;
+              ">
+              {{ employeeData.firstName }} {{ employeeData.lastName }}
+            </h2>
+
+            <h3
+              style="
+                margin: 0;
+                display: inline;
+                font-size: 22px;
+                color: white;
+                float: right;
+              ">
+                Mitarbeiter-ID: {{employeeData.id}}
+            </h3>
+          </div>
+        </div>
+
+        <!--Content of the person-->
+        <div
+            style="
+              height: 100%;
+              width: 100%;
+              background-color: var(--main-card-bg);
+              padding: 14px;
+              border-radius: 8px;
+              margin-top: 20px;
+              display: flex;
+              flex-direction: column;
+              gap: 40px;">
+
+            <!-- Content -->
+            <div class="container">
+              
+              <!-- Adress-->
+              <div class="childDiv">
+                <div
+                  style="
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    gap: 1%;">
+
+                  <mat-icon style="font-size: 25px; color: rgb(200,200,200)">
+                    home
+                  </mat-icon>
+
+                  <h3
+                    style="
+                      margin: 5;
+                      font-size: 25px;
+                      font-weight: 500;
+                      float: center;
+                      vertical-align: middle;
+                      align-self: center;
+                      position: fixed;
+                      margin: 2px;
+                      margin-left: 30px;
+                      color: rgb(220,220,220);">
+                        Adresse
+                  </h3>
+                </div>
+
+                <mat-card
+                style="
+                  box-shadow: none;
+                  border-radius: 8px;
+                  padding: 35px;
+                  margin: 20px 0 0 0;
+                  flex-direction: column;
+                  gap: 40px;
+                  padding: 20px;
+                  float: left;
+                  background-color: var(--main-bg-color);">
+
+                <div>
+                  <h4
+                    style="
+                      margin: 0;
+                      font-size: 22px;
+                      font-weight: 500;
+                      color: var(--font-color-primary);
+                    ">
+                    Wohnort:
+                  </h4>
+                  <p
+                    style="
+                      margin: 10px 0 0 0;
+                      font-size: 20px;
+                      color: var(--font-color-secondary);
+                    ">
+                    {{ employeeData.city }}
+                  </p>
+                </div>
+                <div>
+                  <h4
+                    style="
+                      margin: 0;
+                      font-size: 22px;
+                      font-weight: 500;
+                      color: var(--font-color-primary);
+                    ">
+                    PLZ:
+                  </h4>
+                  <p
+                    style="
+                      margin: 10px 0 0 0;
+                      font-size: 20px;
+                      color: var(--font-color-secondary);
+                    "
+                  >
+                    {{ employeeData.postcode }}
+                  </p>
+                </div>
+                <div>
+                  <h4
+                    style="
+                      margin: 0;
+                      font-size: 22px;
+                      font-weight: 500;
+                      color: var(--font-color-primary);
+                    ">
+                    Straße + Hausnummer:
+                  </h4>
+                  <p
+                    style="
+                      margin: 10px 0 0 0;
+                      font-size: 20px;
+                      color: var(--font-color-secondary);
+                    ">
+                    {{ employeeData.street }}
+                  </p>
+                </div>
+                </mat-card>
+              </div>
+            
+              <!--Phone-->
+              <div class="childDiv">
+                <div style="
+                      display: flex;
+                      flex-direction: row;
+                      align-items: center;
+                      gap: 1%;">
+
+                  <mat-icon style="font-size: 25px; color: rgb(200,200,200)">
+                    phone
+                  </mat-icon>
+
+                  <h3
+                    style="
+                    margin: 5;
+                    font-size: 25px;
+                    font-weight: 500;
+                    float: center;
+                    vertical-align: middle;
+                    align-self: center;
+                    position: fixed;
+                    margin: 2px;
+                    margin-left: 30px;
+                    color: rgb(220,220,220);">
+                      Telefonnummer
+                  </h3>
+                </div>   
+
+                <mat-card
+                    style="
+                    box-shadow: none;
+                    border-radius: 8px;
+                    padding: 35px;
+                    margin: 20px 0 0 0;
+                    flex-direction: column;
+                    gap: 40px;
+                    padding: 20px;
+                    float: left;
+                    background-color: var(--main-bg-color);">
+                    <p
+                      style="
+                      margin: 20px;
+                      font-size: 22px;
+                      float: left;
+                      color: var(--font-color-secondary);">
+                    {{ employeeData.phone }}
+                    </p>
+                  </mat-card>
+              </div>
+
+              <!--Skills-->
+              <div class="childDiv">
+                <div style="
+                      display: flex;
+                      flex-direction: row;
+                      align-items: center;
+                      gap: 1%;">
+                  <mat-icon style="font-size: 25px; color: rgb(200,200,200)">
+                    lightbulb
+                  </mat-icon>
+                  <h3
+                    style="
+                    margin: 5;
+                    font-size: 25px;
+                    font-weight: 500;
+                    float: center;
+                    vertical-align: middle;
+                    align-self: center;
+                    position: fixed;
+                    margin: 2px;
+                    margin-left: 30px;
+                    color: rgb(220,220,220);">
+                    Skills
+                  </h3> 
+                </div>
+
+                <mat-card
+                  style="
+                    box-shadow: none;
+                    border-radius: 8px;
+                    padding: 35px;
+                    margin: 20px 0 0 0;
+                    flex-direction: column;
+                    gap: 40px;
+                    padding: 20px;
+                    float: left;
+                    background-color: var(--main-bg-color);">
+
+                    <ul>
+                      <li
+                        *ngFor="let item of employeeData.skillSet">
+                        <b>{{ item.toString() }}</b>
+                      </li>
+                    </ul>
+                  </mat-card>
+              </div>
+        </div>
+
+        <!--Edit and delete-->
+        <div
+          style="
+            display: flex;
+            flex-direction: row;
+            gap: 5px;
+            justify-content: flex-end;
+            margin-top: 15px;
+          "
+        >
+          <button
+            mat-stroked-button
+            (click)="openEditEmployeeDialog()"
+            class="editButton"
+            type="button"
+          >
+            <div class="buttonContent__Wrapper">
+              <mat-icon class="buttonIcon">edit</mat-icon>
+              <p class="buttonText">Bearbeiten</p>
+            </div>
+          </button>
+          <button
+            mat-stroked-button
+            (click)="openDeleteEmployeeDialog()"
+            class="deleteButton"
+            type="button"
+          >
+            <div class="buttonContent__Wrapper">
+              <mat-icon class="buttonIcon">delete</mat-icon>
+              <p class="buttonText">Löschen</p>
+            </div>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+  <ng-template #noEmployeeData>
+    <div class="detailDiv">
+      <div class="noEmployeeBackground">
+        <div class="noEmployeeDiv">
+          <p class="noEmployeeMessage">
+            Bitte wähle einen Mitarbeiter aus
+          </p>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+</div>

@@ -1,0 +1,121 @@
+<form #employeeForm="ngForm" (ngSubmit)="updateEmployee()">
+  <h1>Mitarbeiter:innen bearbeiten</h1>
+
+  <div class="form-row">
+    <div class="form__group">
+      <input
+        class="form__field"
+        type="text"
+        id="lastName"
+        name="lastName"
+        [(ngModel)]="tempLastName"
+        ngModel
+        required
+        maxlength="25"
+        placeholder=" "
+      />
+      <label for="lastName" class="form__label">Name</label>
+    </div>
+
+    <div class="form__group">
+      <input
+        class="form__field"
+        type="text"
+        id="firstName"
+        name="firstName"
+        ngModel
+        [(ngModel)]="tempFirstName"
+        required
+        maxlength="20"
+        placeholder=" "
+      />
+      <label for="firstName" class="form__label">Vorname</label>
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="form__group">
+      <input
+        class="form__field"
+        type="text"
+        id="phone"
+        name="phone"
+        ngModel
+        [(ngModel)]="tempPhone"
+        required
+        maxlength="20"
+        placeholder=" "
+      />
+      <label for="phone" class="form__label">Telefonnummer:</label>
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="form__group">
+      <input
+        class="form__field"
+        type="text"
+        id="street"
+        name="street"
+        ngModel
+        [(ngModel)]="tempStreet"
+        required
+        maxlength="50"
+        placeholder=" "
+      />
+      <label for="street" class="form__label">Straße / Hausnummer:</label>
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="form__group">
+      <input
+        class="form__field"
+        type="text"
+        id="city"
+        name="city"
+        ngModel
+        [(ngModel)]="tempCity"
+        required
+        maxlength="20"
+        placeholder=" "
+      />
+      <label for="city" class="form__label">Stadt:</label>
+    </div>
+
+    <div class="form__group">
+      <input
+        class="form__field"
+        type="text"
+        id="postcode"
+        name="postcode"
+        ngModel
+        [(ngModel)]="tempPostcode"
+        required
+        minlength="5"
+        maxlength="5"
+        placeholder=" "
+      />
+      <label for="postcode" class="form__label">PLZ:</label>
+    </div>
+  </div>
+
+  <div class="buttonGroup">
+    <button
+      mat-stroked-button
+      type="submit"
+      class="color-button"
+      [disabled]="!employeeForm.valid"
+    >
+      Aktualisieren
+    </button>
+    <button
+      mat-stroked-button
+      class="cancel"
+      type="button"
+      (click)="handleClose()"
+    >
+      Abbrechen
+    </button>
+  </div>
+</form>

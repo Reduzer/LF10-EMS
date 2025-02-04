@@ -1,0 +1,134 @@
+.mat-dialog-container {
+  max-width: 600px;
+  width: 100%;
+}
+
+form {
+  background-color: var(--main-card-bg);
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 100%;
+}
+
+h1 {
+  color: var(--main-text-color);
+  font-size: 24px;
+  margin: 1.5rem;
+}
+
+.form-row {
+  display: flex;
+  gap: 1.5rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-top: 1.5rem;
+  justify-content: space-evenly;
+}
+
+.form__group {
+  position: relative;
+  padding: 20px 0 0;
+  width: 100%;
+}
+
+.form__field {
+  font-size: 18px;
+  font-family: inherit;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #9b9b9b;
+  outline: 0;
+  color: var(--main-text-color);
+  padding: 10px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+}
+
+.form__field::placeholder {
+  color: transparent;
+}
+
+.form__field:placeholder-shown ~ .form__label {
+  font-size: 17px;
+  cursor: text;
+  top: 20px;
+}
+
+.form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 17px;
+  color: #9b9b9b;
+  pointer-events: none;
+}
+
+.form__field:focus {
+  border-color: rgb(120,0,120);
+  border-image-slice: 1;
+}
+
+.form__field:focus ~ .form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  color: #9b9b9b;
+}
+
+.form__field:required,
+.form__field:invalid {
+  box-shadow: none;
+}
+
+.buttonGroup {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+  margin-bottom: 1.5rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.buttonGroup button {
+  flex-basis: 48%;
+}
+
+.buttonGroup button:first-child {
+  margin-right: 4%;
+}
+
+.full-width {
+  flex: 1;
+}
+
+.buttonGroup button {
+  flex-basis: 48%;
+}
+
+.buttonGroup button:first-child {
+  margin-right: 4%;
+}
+
+.mdc-button.color-button:valid {
+  background-color: rgb(80,200,80);
+}
+
+.mdc-button.color-button:disabled {
+  background-color: transparent;
+  color: var(--main-text-color);
+  border-color: var(--main-text-color);
+  opacity: 30%;
+}
+
+.mdc-button.cancel {
+  background-color: rgb(200,80,40);
+  border: 1px solid var(--main-text-color);
+  color: var(--main-text-color);
+}
+
+.mdc-button.deleteButton {
+  color: var(--main-text-color);
+}

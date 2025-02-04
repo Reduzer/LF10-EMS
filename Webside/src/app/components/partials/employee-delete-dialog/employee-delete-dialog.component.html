@@ -1,0 +1,34 @@
+<form class="employee-delete-dialog-form">
+  <h1 class="employee-delete-dialog-title" mat-dialog-title>
+    Mitarbeiter:in löschen
+  </h1>
+  <div class="employee-delete-dialog-content" mat-dialog-content>
+    <p>
+      Bist du sicher, dass du
+      <span style="font-weight: bold">
+        {{ employeeData.firstName }} {{ employeeData.lastName }}
+      </span>
+      löschen möchtest?
+    </p>
+    <p>Dabei gehen möglicherweise wichtige Informationen verloren.</p>
+  </div>
+  <div class="employee-delete-button-wrapper" mat-dialog-actions>
+    <button
+      mat-stroked-button
+      color="warn"
+      class="delete"
+      type="button"
+      (click)="handleDeleteEmployee()"
+    >
+      Löschen
+    </button>
+    <button
+      mat-stroked-button
+      class="cancel"
+      type="button"
+      (click)="handleClose()"
+    >
+      Abbrechen
+    </button>
+  </div>
+</form>

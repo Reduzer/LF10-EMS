@@ -1,0 +1,47 @@
+.action-button {
+  min-width: 100px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 10px;
+}
+.employee-delete-button {
+  border: none;
+  background-color: var(--main-button-red);
+  color: var(--main-text-color);
+  transition: box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+.employee-delete-button:hover {
+  background-color: var(--main-button-red);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.employee-delete-button-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: flex-end;
+}
+.employee-delete-dialog-content {
+  color: var(--main-text-color);
+}
+.employee-delete-dialog-title {
+  color: var(--main-text-color);
+}
+p {
+  margin: 0;
+}
+
+.employee-delete-dialog-form {
+  background-color: var(--main-card-bg);
+}
+
+.mdc-button.delete {
+  color: white;
+  background-color: #cc1d1d;
+}
+
+.mdc-button.cancel {
+  color: var(--main-text-color);
+  border-color: var(--main-text-color);
+}

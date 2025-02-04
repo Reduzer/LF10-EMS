@@ -1,0 +1,118 @@
+<form
+  #addEmployeeForm="ngForm"
+  (ngSubmit)="addEmployee(addEmployeeForm.value)"
+  class="fromContainer"
+>
+  <h1>Mitarbeiter:innen hinzufügen</h1>
+
+  <div class="form-row">
+    <div class="form__group">
+      <input
+        class="form__field"
+        type="text"
+        id="lastName"
+        name="lastName"
+        ngModel
+        required
+        maxlength="25"
+        placeholder=" "
+      />
+      <label for="lastName" class="form__label">Name</label>
+    </div>
+
+    <div class="form__group">
+      <input
+        class="form__field"
+        type="text"
+        id="firstName"
+        name="firstName"
+        ngModel
+        required
+        maxlength="20"
+        placeholder=" "
+      />
+      <label for="firstName" class="form__label">Vorname</label>
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="form__group">
+      <input
+        class="form__field"
+        type="text"
+        id="phone"
+        name="phone"
+        ngModel
+        required
+        maxlength="20"
+        placeholder=" "
+      />
+      <label for="phone" class="form__label">Telefonnummer:</label>
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="form__group">
+      <input
+        class="form__field"
+        type="text"
+        id="street"
+        name="street"
+        ngModel
+        required
+        maxlength="50"
+        placeholder=" "
+      />
+      <label for="street" class="form__label">Straße / Hausnummer:</label>
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="form__group">
+      <input
+        class="form__field"
+        type="text"
+        id="city"
+        name="city"
+        ngModel
+        required
+        maxlength="20"
+        placeholder=" "
+      />
+      <label for="city" class="form__label">Stadt:</label>
+    </div>
+
+    <div class="form__group">
+      <input
+        class="form__field"
+        type="text"
+        id="postcode"
+        name="postcode"
+        ngModel
+        required
+        minlength="5"
+        maxlength="5"
+        placeholder=" "
+      />
+      <label for="postcode" class="form__label">PLZ:</label>
+    </div>
+  </div>
+
+  <div class="buttonGroup">
+
+    <button (click)="openEmployeeSkillsDialog()">
+      <div class="buttonContent__Wrapper">
+        <p class="buttonText" style="float:center">weiter</p>
+        <mat-icon style="float: center;">arrow_forward</mat-icon>
+      </div>
+    </button>
+
+    <button
+      mat-stroked-button
+      class="cancel"
+      type="button"
+      (click)="abbrechen()">
+      Abbrechen
+    </button>
+  </div>
+</form>

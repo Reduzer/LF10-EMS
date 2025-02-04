@@ -1,0 +1,107 @@
+.detailDiv {
+  height: 100%;
+  background-color: rgb(60,60,60);
+  border: 2px;
+  border-style: solid;
+  border-color: rgb(120,0,120);
+}
+
+.flex-container {
+  height: 100%;
+}
+
+.detailContent {
+  height: 100%;
+  background-color: var(--main-bg-color);
+  color: var(--main-text-color);
+}
+
+.tile:hover {
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.buttonsSection {
+  grid-area: buttons;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin-top: auto;
+}
+
+.noEmployeeBackground {
+  padding: 40px;
+  height: calc(100vh - 60px);
+  background-image: rgb(40,40,40);
+  border-radius: 15px;
+}
+
+.noEmployeeDiv {
+  background: var(--main-card-bg);
+  padding: 35px;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.noEmployeeMessage {
+  margin: 0;
+  color: white;
+}
+
+.buttonContent__Wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4px;
+}
+
+.buttonIcon {
+  font-size: 18px;
+  width: 18px;
+  height: 18px;
+}
+
+.buttonText {
+  font-size: 18px;
+  margin: 0;
+}
+
+mat-card {
+  background-color: var(--main-card-bg);
+  color: var(--main-text-color);
+  margin: 0.5rem;
+}
+
+mat-card-header {
+  color: var(--main-text-color);
+}
+
+mat-card-subtitle {
+  color: var(--main-text-color);
+  font-size: x-large;
+}
+
+.mdc-button.editButton {
+  color: var(--main-text-color);
+  border-color: var(--main-text-color);
+  margin-right: 0.7rem;
+}
+
+.mdc-button.deleteButton {
+  color: white;
+  background-color: #cc1d1d;
+}
+
+.childDiv {
+  width: 25%;
+  float: left;
+}
+
+.container{
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.skill{
+  color: white;
+}
