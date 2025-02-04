@@ -1,8 +1,8 @@
 <form
   #addEmployeeForm="ngForm"
   (ngSubmit)="addEmployee(addEmployeeForm.value)"
-  class="fromContainer"
->
+  class="fromContainer">
+
   <h1>Mitarbeiter:innen hinzufügen</h1>
 
   <div class="form-row">
@@ -99,12 +99,12 @@
   </div>
 
   <div class="buttonGroup">
-
-    <button (click)="openEmployeeSkillsDialog()">
-      <div class="buttonContent__Wrapper">
-        <p class="buttonText" style="float:center">weiter</p>
-        <mat-icon style="float: center;">arrow_forward</mat-icon>
-      </div>
+    <button
+      mat-stroked-button
+      type="submit"
+      [disabled]="addEmployeeForm.invalid">
+      <p class="buttonText" style="display: inline;">Hinzufügen</p>
+      <mat-icon style="float: right; display: inline;">arrow_forward</mat-icon>
     </button>
 
     <button

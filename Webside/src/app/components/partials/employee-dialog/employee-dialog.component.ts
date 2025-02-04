@@ -21,14 +21,25 @@ export class EmployeeDialogComponent {
   openEmployeeSkillsDialog() {
     this.dialogRef.close();
     const dialogRef = this.dialog.open(EmployeeDialogSkillsComponent, {});
-    
-    dialogRef.afterClosed().subscribe((result) => {
-      console.log(`Dialog result: ${result}`);
-    });
   }
 
   addEmployee(Data: any){
+    this.employeeService.saveEmployee(Data).subscribe(
+      (result: any) => {
+        console.warn(result);
 
+        if (result && result.id) {
+          const newEmployeeId = result.id;
+
+          this.dialogRef.close(newEmployeeId);
+
+          this.router.navigate(['/employee', newEmployeeId]);
+        }
+      },
+      (error) => {
+        console.error('Fehler beim Hinzufügen des Mitarbeiters:', error);
+      }
+    );
   }
 
   abbrechen() {
