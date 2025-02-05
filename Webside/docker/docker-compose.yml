@@ -1,5 +1,3 @@
-version: '3'
-
 volumes:
   employee_postgres_data:
     driver: local
