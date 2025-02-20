@@ -13,16 +13,15 @@ import { catchError, throwError } from 'rxjs';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-employee-delete-dialog',
-  standalone: true,
-  imports: [
-    MatDialogTitle,
-    MatDialogContent,
-    MatDialogActions,
-    MatButtonModule,
-  ],
-  templateUrl: './employee-delete-dialog.component.html',
-  styleUrl: './employee-delete-dialog.component.css',
+    selector: 'app-employee-delete-dialog',
+    imports: [
+        MatDialogTitle,
+        MatDialogContent,
+        MatDialogActions,
+        MatButtonModule,
+    ],
+    templateUrl: './employee-delete-dialog.component.html',
+    styleUrl: './employee-delete-dialog.component.css'
 })
 export class EmployeeDeleteDialogComponent {
   employeeData: Employees;

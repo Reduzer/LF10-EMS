@@ -7,9 +7,10 @@ import { EmployeeDeleteDialogComponent } from '../employee-delete-dialog/employe
 import { EditDialogComponent } from '../edit-dialog/edit-dialog.component';
 
 @Component({
-  selector: 'app-detail-view',
-  templateUrl: './detail-view.component.html',
-  styleUrls: ['./detail-view.component.css'],
+    selector: 'app-detail-view',
+    templateUrl: './detail-view.component.html',
+    styleUrls: ['./detail-view.component.css'],
+    standalone: false
 })
 export class DetailViewComponent implements OnInit {
   employeeId!: number;

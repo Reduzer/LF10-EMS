@@ -14,15 +14,16 @@ import { MatDialog } from '@angular/material/dialog';
 import { EmployeeDialogComponent } from '../employee-dialog/employee-dialog.component';
 
 @Component({
-  selector: 'app-employee-list',
-  templateUrl: './employee-list.component.html',
-  styleUrls: ['./employee-list.component.css'],
-  animations: [
-    trigger('fade', [
-      state('void', style({ opacity: 0 })),
-      transition(':enter, :leave', [animate('120ms ease-in-out')]),
-    ]),
-  ],
+    selector: 'app-employee-list',
+    templateUrl: './employee-list.component.html',
+    styleUrls: ['./employee-list.component.css'],
+    animations: [
+        trigger('fade', [
+            state('void', style({ opacity: 0 })),
+            transition(':enter, :leave', [animate('120ms ease-in-out')]),
+        ]),
+    ],
+    standalone: false
 })
 export class EmployeeListComponent implements OnInit {
   employees: Employees[] = [];

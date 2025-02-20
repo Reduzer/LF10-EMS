@@ -5,10 +5,11 @@ import { EmployeeService } from '../../../services/employee.Service';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-edit-dialog',
-  templateUrl: './edit-dialog.component.html',
-  styleUrls: ['./edit-dialog.component.css'],
-  providers: [EmployeeService],
+    selector: 'app-edit-dialog',
+    templateUrl: './edit-dialog.component.html',
+    styleUrls: ['./edit-dialog.component.css'],
+    providers: [EmployeeService],
+    standalone: false
 })
 export class EditDialogComponent implements OnInit {
   employeeData: any;

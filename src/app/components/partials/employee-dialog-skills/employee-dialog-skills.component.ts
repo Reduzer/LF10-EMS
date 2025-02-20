@@ -5,11 +5,10 @@ import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { Employees } from 'src/app/shared/models/employees';
 
 @Component({
-  selector: 'app-employee-dialog-skills',
-  standalone: true,
-  imports: [],
-  templateUrl: './employee-dialog-skills.component.html',
-  styleUrl: './employee-dialog-skills.component.css'
+    selector: 'app-employee-dialog-skills',
+    imports: [],
+    templateUrl: './employee-dialog-skills.component.html',
+    styleUrl: './employee-dialog-skills.component.css'
 })
 export class EmployeeDialogSkillsComponent {
   

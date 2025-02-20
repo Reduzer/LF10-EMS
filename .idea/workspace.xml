@@ -4,14 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d2014a61-267e-4f92-a9ae-f847a5a0b72b" name="Changes" comment="" />
+    <list default="true" id="d2014a61-267e-4f92-a9ae-f847a5a0b72b" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/angular.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/partials/detail-view/detail-view.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/partials/detail-view/detail-view.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/partials/edit-dialog/edit-dialog.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/partials/edit-dialog/edit-dialog.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/partials/employee-delete-dialog/employee-delete-dialog.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/partials/employee-delete-dialog/employee-delete-dialog.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/partials/employee-dialog-skills/employee-dialog-skills.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/partials/employee-dialog-skills/employee-dialog-skills.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/partials/employee-dialog/employee-dialog.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/partials/employee-dialog/employee-dialog.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/partials/employee-list/employee-list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/partials/employee-list/employee-list.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/partials/header/header.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/partials/header/header.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
@@ -75,6 +88,7 @@
       <updated>1740065259654</updated>
       <workItem from="1740065261088" duration="69000" />
       <workItem from="1740065341758" duration="981000" />
+      <workItem from="1740067582250" duration="342000" />
     </task>
     <servers />
   </component>
