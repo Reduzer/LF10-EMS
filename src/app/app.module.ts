@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HttpClientModule } from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDialogModule } from '@angular/material/dialog';
 import { FormsModule } from '@angular/forms';
@@ -19,31 +19,23 @@ import { DetailViewComponent } from './components/partials/detail-view/detail-vi
 import { EmployeeListComponent } from './components/partials/employee-list/employee-list.component';
 import { EmployeeDialogComponent } from './components/partials/employee-dialog/employee-dialog.component';
 
-@NgModule({
-  declarations: [
-    AppComponent,
-    HeaderComponent,
-    DetailViewComponent,
-    EmployeeListComponent,
-    EmployeeDialogComponent,
-    EditDialogComponent,
-  ],
-  imports: [
-    MatCardModule,
-    MatButtonModule,
-    BrowserModule,
-    MatInputModule,
-    ReactiveFormsModule,
-    MatIconModule,
-    MatDialogModule,
-    FormsModule,
-  
-    BrowserAnimationsModule,
-    HttpClientModule,
-    AppRoutingModule,
-    MatDialogModule,
-  ],
-  providers: [EmployeeService],
-  bootstrap: [AppComponent],
-})
+@NgModule({ declarations: [
+        AppComponent,
+        HeaderComponent,
+        DetailViewComponent,
+        EmployeeListComponent,
+        EmployeeDialogComponent,
+        EditDialogComponent,
+    ],
+    bootstrap: [AppComponent], imports: [MatCardModule,
+        MatButtonModule,
+        BrowserModule,
+        MatInputModule,
+        ReactiveFormsModule,
+        MatIconModule,
+        MatDialogModule,
+        FormsModule,
+        BrowserAnimationsModule,
+        AppRoutingModule,
+        MatDialogModule], providers: [EmployeeService, provideHttpClient(withInterceptorsFromDi())] })
 export class AppModule {}
